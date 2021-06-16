@@ -1,0 +1,42 @@
+<div class="editor-container">
+    <div>
+        <button
+            mat-mini-fab
+            color="primary"
+            (click)="exec('bold')"
+        >
+            <mat-icon>format_bold</mat-icon>
+        </button>
+        <button
+            mat-mini-fab
+            color="warn"
+            (click)="exec('italic')"
+        >
+            <mat-icon>format_italic</mat-icon>
+        </button>
+        <button
+            mat-mini-fab
+            color="accent"
+            (click)="exec('underline')"
+        >
+            <mat-icon>format_underline</mat-icon>
+        </button>
+        <button
+            mat-mini-fab
+            color="primary"
+            (click)="print()"
+            class="float-right"
+        >
+            <mat-icon>print</mat-icon>
+        </button>
+    </div>
+
+
+    <div
+        contenteditable
+        (input)="onInput($event)"
+        class="editor-content"
+        id="editor"
+        #editor
+    ></div>
+</div>
